@@ -1,0 +1,39 @@
+<div class="container py-5">
+    <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+      <div class="col mb-3">
+        R3D
+        <p class="text-body-secondary">© 2023</p>
+      </div>
+  
+      <div class="col mb-3">
+  
+      </div>
+  
+      <div class="col mb-3">
+        <h5>General</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a routerLink="/printers" (click)="utilsService.scrollUp()" class="nav-link p-0 text-body-secondary">Printers</a></li>
+          <li class="nav-item mb-2"><a routerLink="/forums" (click)="utilsService.scrollUp()" class="nav-link p-0 text-body-secondary">Forums</a></li>
+          <li class="nav-item mb-2"><a routerLink="/about" (click)="utilsService.scrollUp()" class="nav-link p-0 text-body-secondary">About</a></li>
+        </ul>
+      </div>
+  
+      <div class="col mb-3">
+        <h5>Products</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a routerLink="/products" (click)="utilsService.scrollUp()" class="nav-link p-0 text-body-secondary">My Products</a></li>
+          <li class="nav-item mb-2"><a routerLink="/products/share" (click)="utilsService.scrollUp()" class="nav-link p-0 text-body-secondary">Community Products</a></li>
+          <li class="nav-item mb-2"><a routerLink="/products/print-tok" (click)="utilsService.scrollUp()" class="nav-link p-0 text-body-secondary">PrintTok</a></li>
+        </ul>
+      </div>
+  
+      <div class="col mb-3">
+        <h5>Users</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a routerLink="/sign-in" (click)="utilsService.scrollUp()" class="nav-link p-0 text-body-secondary">Sign-In</a></li>
+          <li class="nav-item mb-2"><a routerLink="/home" (click)="signOut()" class="nav-link p-0 text-body-secondary">Sign-Out</a></li>
+          <li class="nav-item mb-2"><a routerLink="/user-information" (click)="utilsService.scrollUp()" class="nav-link p-0 text-body-secondary">User Information</a></li>
+        </ul>
+      </div>
+    </footer>
+  </div>

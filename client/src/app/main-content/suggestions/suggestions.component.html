@@ -1,0 +1,40 @@
+<div class="container py-4 my-2">
+    <h1>Suggestions</h1>
+    <form [formGroup]="suggestionForm" (ngSubmit)="OnSuggestionSubmit()">
+        <div class="mb-3">
+            <label class="form-label">Email:</label>
+            <input class="form-control red-border" formControlName="email"/>
+            <small class="error-message" *ngIf="suggestionForm.get('email')?.touched &&
+             suggestionForm.get('email')?.invalid">* please enter a valid email</small>
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label">Topic:</label>
+            <input type="text" class="form-control" formControlName="topic">
+            <small class="error-message" *ngIf="suggestionForm.get('topic')?.touched &&
+             suggestionForm.get('topic')?.invalid">* please enter a topic</small>
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label">Description:</label>
+            <textarea name="" id="" cols="20" rows="5" class="form-control" formControlName="description"></textarea>
+            <small class="error-message" *ngIf="suggestionForm.get('description')?.touched &&
+             suggestionForm.get('description')?.invalid">* please enter a description</small>
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label">Tags:</label>
+            <small style="display: block;" *ngIf="!getTags().length">* if you wish to add tags to your suggestion click the button below</small>
+            <div class="tags row" formArrayName="tags" *ngFor="let control of getTags().controls, let i=index">
+                <div class="col-9 mt-3">
+                    <input type="text" class="form-control" placeholder="Add Tag" [formControlName]="i">
+                </div>
+                <div class="col-3 mt-3">
+                    <button type="button" class="btn btn-secondary" (click)="removeTag(i)">remove tag</button>
+                </div>
+            </div>
+            <div class="">
+                <button type="button" class="btn btn-secondary mt-3" (click)="addTag()">Add tag</button>
+            </div>
+            <!-- <button type="button" class="btn btn-secondary mt-3 mx-3" (click)="removeTag()">Remove last tag</button> -->
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

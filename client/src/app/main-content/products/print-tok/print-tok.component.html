@@ -1,0 +1,9 @@
+<div>
+    <button (click)="prevVideo()">Previous</button>
+    <button (click)="nextVideo()">Next</button>
+    <p>video name: {{ videos[currentVideo] }}, index: {{ currentVideo }}</p>
+    <video class="videoPlayer" height="320" controls autoplay webkit-playsinline playsinline #videoPlayer>
+        <source [src]="videos[currentVideo]" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>

@@ -1,0 +1,85 @@
+<div
+  class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-body-tertiary"
+>
+  <div class="col-md-6 p-lg-5 mx-auto my-5">
+    <h1 class="display-3 fw-bold">Printers</h1>
+    <h3 class="fw-normal text-muted mb-3">Build amazing things, easily.</h3>
+    <!-- <div class="d-flex gap-3 justify-content-center lead fw-normal">
+            <a class="icon-link" href="#">
+                Learn more
+                <svg class="bi">
+                    <use xlink:href="#chevron-right"></use>
+                </svg>
+            </a>
+            <a class="icon-link" href="#">
+                Buy
+                <svg class="bi">
+                    <use xlink:href="#chevron-right"></use>
+                </svg>
+            </a>
+        </div> -->
+  </div>
+  <div class="product-device d-none d-md-block">
+    <img
+      src="../../../assets/printers/creality_k1.jpeg"
+      alt="a 3d printer by creality"
+      height="300"
+    />
+  </div>
+  <div class="product-device product-device-2 d-none d-md-block">
+    <img
+      src="../../../assets/printers/Bambu-Lab-X1C.jpg"
+      alt="a 3d printer by creality"
+      height="300"
+    />
+  </div>
+</div>
+
+<div
+  class="container col-xxl-8 px-4 py-3"
+  *ngFor="let printer of printers; let i = index"
+>
+  <div class="row flex-lg-row-reverse align-items-center g-5 py-3">
+    <div class="col-10 col-sm-8 col-lg-6">
+      <img
+        [src]="printer.image.src"
+        [alt]="printer.image.alt"
+        class="small-image"
+      />
+    </div>
+    <div class="col-lg-6">
+      <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">
+        {{ printer.name }}
+      </h1>
+      <p class="lead">
+        {{ printer.shortDescription }}
+      </p>
+      <h3>Upgrades</h3>
+      <ul>
+        <li *ngFor="let upgrade of printer.upgrades.slice(0, 3), let i = index">{{ upgrade.name }}</li>
+      </ul>
+      <a class="icon-link icon-link-hover" [routerLink]="[i]"
+        >printer details...
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-arrow-right"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+          />
+        </svg>
+      </a>
+    </div>
+  </div>
+  <!-- <div class="row flex-lg-row-reverse align-items-center g-5 py-3">
+        <div *ngIf="printer.slides">
+            <h3>Slides</h3>
+            <app-slider [slides]="printer.slides"></app-slider>
+        </div>
+    </div> -->
+</div>

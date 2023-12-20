@@ -1,0 +1,69 @@
+<div class="px-4 py-5 my-5 text-center">
+  <h1 class="display-5 fw-bold text-body-emphasis">Welcome to R3D</h1>
+  <div class="col-lg-6 mx-auto">
+    <p class="lead mb-4">A peek into the world of 3d design and printing.</p>
+  </div>
+</div>
+<div class="container col-xxl-8 px-4 py-3">
+  <div class="row flex-lg-row-reverse align-items-center g-5 py-3">
+    <div class="col-10 col-sm-8 col-lg-6">
+      <app-slider [slides]="printerSlides"></app-slider>
+    </div>
+    <div class="col-lg-6">
+      <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">
+        3D Printers
+      </h1>
+      <p class="lead">
+        you can take a look at my current and previous printers, look at the
+        upgrades section for each printer with links to the upgrades online.
+      </p>
+      <a class="icon-link icon-link-hover" routerLink="/printers" (click)="scrollUp()">
+        learn more...
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-arrow-right"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+          />
+        </svg>
+      </a>
+    </div>
+  </div>
+</div>
+<div class="container col-xxl-8 px-4 py-3">
+  <div class="row flex-lg-row-reverse align-items-center g-5 py-3">
+    <div class="col-10 col-sm-8 col-lg-6">
+      <app-slider [slides]="productSlides"></app-slider>
+    </div>
+    <div class="col-lg-6">
+      <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Products</h1>
+      <p class="lead">
+        look at all of the products i've created some of my own creation and
+        some are remix of other products by other creators which i've modified
+        for my needs.
+      </p>
+      <a class="icon-link icon-link-hover" routerLink="/products" (click)="scrollUp()"
+        >learn more...
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-arrow-right"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+          />
+        </svg>
+      </a>
+    </div>
+  </div>
+</div>

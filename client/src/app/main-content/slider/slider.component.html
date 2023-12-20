@@ -1,0 +1,17 @@
+<div class="slideshow-container small-image">
+    <div class="mySlides" *ngFor="let slide of slides, let i=index" [ngClass]="{ mySlides: slideIndex!==i }">
+        <div class="numbertext">{{ i+1 }} / {{ slides.length }}</div>
+        <img [src]="slide.src" class="small-image">
+        <div class="text">
+            <span>{{ slide.caption }}</span>
+        </div>
+    </div>
+
+    <a class="prev" (click)="plusSlides(-1)">&#10094;</a>
+    <a class="next" (click)="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<div style="text-align:center">
+    <span class="dot" [ngClass]="{active: i===slideIndex}" *ngFor="let slide of slides, let i=index" (click)="currentSlide(i)" ></span>
+</div>
