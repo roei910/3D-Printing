@@ -1,6 +1,7 @@
 # R3D
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.6.
+Hosted on netlify: https://three-print.netlify.app
 
 ## Development server
 
