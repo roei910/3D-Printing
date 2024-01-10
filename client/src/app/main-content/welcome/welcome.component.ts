@@ -34,4 +34,8 @@ export class WelcomeComponent {
   scrollUp(){
     this.utilsService.scrollUp();
   }
+
+  Logging(){
+    console.log("hello!");
+  }
 }
